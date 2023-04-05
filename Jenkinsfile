@@ -2,12 +2,25 @@ pipeline {
     agent any
 
     stages {
+        
 //         stage('Git Checkout') {
+        when{
+            expression{
+            params.branchname == "develop"
+            }
+           
+        }
 //             steps {
 //                 git branch: 'main', credentialsId: 'github-tokens', url: 'https://github.com/javahometech/hr-api'
 //             }
 //         }
         stage('Maven Build') {
+             when{
+            expression{
+            params.branchname == "develop"
+            }
+           
+        }
             steps {
                 sh 'mvn clean package'
             }
