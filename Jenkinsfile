@@ -30,9 +30,9 @@ pipeline {
                 }
             }
         }
-    post {
-        always{
-            cleanws()   
-    }
+    //post {
+    //    always{
+    //       cleanws()   
+    //}
 }
 }
