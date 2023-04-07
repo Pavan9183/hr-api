@@ -29,10 +29,5 @@ pipeline {
                tomcatDeploy()
                 }
             }
-        }
-    //post {
-    //    always{
-    //       cleanws()   
-    //}
-}
+     }
 }
